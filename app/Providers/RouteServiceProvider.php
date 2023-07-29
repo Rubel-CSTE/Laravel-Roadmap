@@ -24,6 +24,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Route::pattern('id', '[0-9]+');
+        
         $this->configureRateLimiting();
 
         $this->routes(function () {
